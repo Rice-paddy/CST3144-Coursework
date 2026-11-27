@@ -19,7 +19,7 @@
             <li v-for="lesson in lessons">
                 <h3>{{lesson.Subject}}</h3>
                 <figure>
-                    <img v-bind:src="lesson.Visuals.image" v-bind:alt="lesson.Visuals.alt" width=300>
+                    <img v-bind:src="lesson.Visuals.image" v-bind:alt="lesson.Visuals.alt" width=150>
                 </figure>
                 <p>Students will cover: {{lesson.Description}}</p>
                 <p>Location: {{lesson.Location}}</p>
@@ -44,7 +44,7 @@
                     lessons:[
                         {
                             Subject:"English",
-                            Description:"Cambridge syllabus for grammar, reading, writing and speaking.",
+                            Description:"grammar, reading, writing and speaking.",
                             Location: "CHGO1",
                             Price: "$10/hour",
                             Teacher: "Rita Manguchi",
@@ -58,7 +58,7 @@
 
                         {
                             Subject:"Math",
-                            Description:"Cambridge syllabus for algebra, geometry, calculus and statistics.",
+                            Description:"algebra, geometry, calculus and statistics.",
                             Location: "CHGO2",
                             Price: "$20/hour",
                             Teacher: "John Nyika",
@@ -72,17 +72,145 @@
 
                         {
                             Subject:"Science",
-                            Description:"Cambridge syllabus for physics, chemistry and biology.",
+                            Description:"physics, chemistry and biology.",
                             Location: "CHGO3",
                             Price: "$20/hour",
-                            Teacher: "John Nyika",
+                            Teacher: "Charlotte Dijina",
                             availableSpaces: 5,
                             Visuals: {
                                 name: "Science",
                                 image: "images/science.png",
                                 alt: "Science picture"
                             }
+                        },
+
+                        {
+                            Subject:"Arts",
+                            Description:"drama, photography, painting and music.",
+                            Location: "CHGO4",
+                            Price: "$30/hour",
+                            Teacher: "Sovieshu Dhara",
+                            availableSpaces: 5,
+                            Visuals: {
+                                name: "Arts",
+                                image: "images/arts.png",
+                                alt: "Arts picture"
+                            }
+                        },
+
+                        {
+                            Subject:"Culinary Arts",
+                            Description:"food preparation, baking and cooking.",
+                            Location: "CHGO5",
+                            Price: "$20/hour",
+                            Teacher: "Rashta Ngoni",
+                            availableSpaces: 5,
+                            Visuals: {
+                                name: "Culinary Arts",
+                                image: "images/culinary.png",
+                                alt: "Culinary Arts picture"
+                            }
+                        },
+
+                        {
+                            Subject:"Finance",
+                            Description:"invesetments, banking and risk management.",
+                            Location: "CHGO2",
+                            Price: "$20/hour",
+                            Teacher: "John Nyika",
+                            availableSpaces: 5,
+                            Visuals: {
+                                name: "Finance",
+                                image: "images/finance.png",
+                                alt: "Finance picture"
+                            }
+                        },
+
+                        {
+                            Subject:"Global Perspectives",
+                            Description:"global issues, ethics, sustainability and cultural awareness.",
+                            Location: "CHGO1",
+                            Price: "$10/hour",
+                            Teacher: "Rita Manguchi",
+                            availableSpaces: 5,
+                            Visuals: {
+                                name: "Global Perspectives",
+                                image: "images/GP.png",
+                                alt: "Global Perspectives picture"
+                            }
+                        },
+
+                        {
+                            Subject:"Health and Physical Education",
+                            Description:"motor skills, fitness, nutrition and health education.",
+                            Location: "CHG06/ Hendon Field",
+                            Price: "$10/hour",
+                            Teacher: "Charlotte Dijina",
+                            availableSpaces: 5,
+                            Visuals: {
+                                name: "Health and Physical Education",
+                                image: "images/HPE.png",
+                                alt: "Health and Physical Education picture"
+                            }
+                        },
+
+                        {
+                            Subject:"Information Technology",
+                            Description:"computer programming, web development and database management.",
+                            Location: "Lab 1",
+                            Price: "$20/hour",
+                            Teacher: "Ohara Banda",
+                            availableSpaces: 5,
+                            Visuals: {
+                                name: "Information Technology",
+                                image: "images/IT.png",
+                                alt: "Information Technology picture"
+                            }
+                        },
+
+                        {
+                            Subject:"Japanese",
+                            Description:"writing systems, vocabulary, grammar and culture.",
+                            Location: "CHGO1",
+                            Price: "$30/hour",
+                            Teacher: "Rita Manguchi",
+                            availableSpaces: 5,
+                            Visuals: {
+                                name: "Japanese",
+                                image: "images/japanese.png",
+                                alt: "Japanese picture"
+                            }
+                        },
+
+                        {
+                            Subject:"Nutrition",
+                            Description:"clinical nutrition, food science and dietetics.",
+                            Location: "CHGO8",
+                            Price: "$20/hour",
+                            Teacher: "Rashta Ngoni",
+                            availableSpaces: 5,
+                            Visuals: {
+                                name: "Nutrition",
+                                image: "images/nutrition.png",
+                                alt: "Nutrition picture"
+                            }
+                        },
+
+                         {
+                            Subject:"Woodworking",
+                            Description:"safety, wood science, practical assembly and design tools",
+                            Location: "Workshop 1",
+                            Price: "$20/hour",
+                            Teacher: "Alanzo Hove",
+                            availableSpaces: 5,
+                            Visuals: {
+                                name: "Woodworking",
+                                image: "images/woodwork.png",
+                                alt: "Woodworking picture"
+                            }
                         }
+
+
 
                     ]
                 }
