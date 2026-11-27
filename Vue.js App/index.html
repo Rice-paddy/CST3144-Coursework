@@ -11,7 +11,26 @@
 
 <body>
     <div id="app">
-        <h1>Here is the title: {{title}}</h1>
+        <h1>{{title}}</h1>
+        <h2>{{openingMessage}}</h2>
+        <p>{{noticeMesage}}</p>
+        <p>These are the lessons available:</p>
+        <ul>
+            <li v-for="lesson in lessons">
+                <h3>{{lesson.Subject}}</h3>
+                <figure>
+                    <img v-bind:src="lesson.Visuals.image" v-bind:alt="lesson.Visuals.alt" width=300>
+                </figure>
+                <p>Students will cover: {{lesson.Description}}</p>
+                <p>Location: {{lesson.Location}}</p>
+                <p>Price: {{lesson.Price}}</p>
+                <p>Teacher: {{lesson.Teacher}}</p>
+                <p>Available Spaces: {{lesson.availableSpaces}}</p>
+            </li>
+        </ul>
+        
+
+
     </div>
 
     <script type ="module">
@@ -19,7 +38,53 @@
         const myApp = createApp({
             data(){
                 return{
-                    title:"After School Lessons"
+                    title:"Schooly - The Road to A+",
+                    openingMessage: "Welcome to Schooly! We offer after school lessons and activities to help you succeed.",
+                    noticeMesage: "**Take note all lessions take place at Schooly Headquarters, 153 Watermeyer Street.",
+                    lessons:[
+                        {
+                            Subject:"English",
+                            Description:"Cambridge syllabus for grammar, reading, writing and speaking.",
+                            Location: "CHGO1",
+                            Price: "$10/hour",
+                            Teacher: "Rita Manguchi",
+                            availableSpaces: 5,
+                            Visuals: {
+                                name: "English",
+                                image: "images/english.png",
+                                alt: "English picture"
+                            }
+                        },
+
+                        {
+                            Subject:"Math",
+                            Description:"Cambridge syllabus for algebra, geometry, calculus and statistics.",
+                            Location: "CHGO2",
+                            Price: "$20/hour",
+                            Teacher: "John Nyika",
+                            availableSpaces: 5,
+                            Visuals: {
+                                name: "Math",
+                                image: "images/maths.png",
+                                alt: "Math picture"
+                            }
+                        },
+
+                        {
+                            Subject:"Science",
+                            Description:"Cambridge syllabus for physics, chemistry and biology.",
+                            Location: "CHGO3",
+                            Price: "$20/hour",
+                            Teacher: "John Nyika",
+                            availableSpaces: 5,
+                            Visuals: {
+                                name: "Science",
+                                image: "images/science.png",
+                                alt: "Science picture"
+                            }
+                        }
+
+                    ]
                 }
             }
         })
