@@ -6,6 +6,34 @@
     <title>Schooly - The Road to A+</title>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <style>
+        body {font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;}
+        .lesson{
+            border: 1px solid #333;
+            padding: 10px;
+            margin-bottom: 8px;
+            width: 300px;
+        }
+        /*      background: #f2efe9;
+            color: #222;
+            margin: 20px;
+            padding : 2rem 1 rem;
+        /* 
+        #box{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+ */
+        
+
+
+
+
+    </style>
 </head>
 
 
@@ -15,8 +43,7 @@
         <h2>{{openingMessage}}</h2>
         <p>{{noticeMesage}}</p>
         <p>These are the lessons available:</p>
-        <ul>
-            <li v-for="lesson in lessons">
+        <div class="lesson" v-for="lesson in lessons">
                 <h3>{{lesson.Subject}}</h3>
                 <figure>
                     <img v-bind:src="lesson.Visuals.image" v-bind:alt="lesson.Visuals.alt" width=150>
@@ -26,11 +53,7 @@
                 <p>Price: {{lesson.Price}}</p>
                 <p>Teacher: {{lesson.Teacher}}</p>
                 <p>Available Spaces: {{lesson.availableSpaces}}</p>
-            </li>
-        </ul>
-        
-
-
+        </div>
     </div>
 
     <script type ="module">
@@ -43,6 +66,7 @@
                     noticeMesage: "**Take note all lessions take place at Schooly Headquarters, 153 Watermeyer Street.",
                     lessons:[
                         {
+                            ID: 1,
                             Subject:"English",
                             Description:"grammar, reading, writing and speaking.",
                             Location: "CHGO1",
@@ -57,6 +81,7 @@
                         },
 
                         {
+                            ID: 2,
                             Subject:"Math",
                             Description:"algebra, geometry, calculus and statistics.",
                             Location: "CHGO2",
@@ -71,6 +96,7 @@
                         },
 
                         {
+                            ID: 3,
                             Subject:"Science",
                             Description:"physics, chemistry and biology.",
                             Location: "CHGO3",
@@ -85,6 +111,7 @@
                         },
 
                         {
+                            ID: 4,
                             Subject:"Arts",
                             Description:"drama, photography, painting and music.",
                             Location: "CHGO4",
@@ -99,6 +126,7 @@
                         },
 
                         {
+                            ID: 5,
                             Subject:"Culinary Arts",
                             Description:"food preparation, baking and cooking.",
                             Location: "CHGO5",
@@ -113,6 +141,7 @@
                         },
 
                         {
+                            ID: 6,
                             Subject:"Finance",
                             Description:"invesetments, banking and risk management.",
                             Location: "CHGO2",
@@ -127,6 +156,7 @@
                         },
 
                         {
+                            ID: 7,
                             Subject:"Global Perspectives",
                             Description:"global issues, ethics, sustainability and cultural awareness.",
                             Location: "CHGO1",
@@ -141,6 +171,7 @@
                         },
 
                         {
+                            ID: 8,
                             Subject:"Health and Physical Education",
                             Description:"motor skills, fitness, nutrition and health education.",
                             Location: "CHG06/ Hendon Field",
@@ -155,6 +186,7 @@
                         },
 
                         {
+                            ID: 9,
                             Subject:"Information Technology",
                             Description:"computer programming, web development and database management.",
                             Location: "Lab 1",
@@ -169,6 +201,7 @@
                         },
 
                         {
+                            ID: 10,
                             Subject:"Japanese",
                             Description:"writing systems, vocabulary, grammar and culture.",
                             Location: "CHGO1",
@@ -183,6 +216,7 @@
                         },
 
                         {
+                            ID: 11,
                             Subject:"Nutrition",
                             Description:"clinical nutrition, food science and dietetics.",
                             Location: "CHGO8",
@@ -197,6 +231,7 @@
                         },
 
                          {
+                            ID: 12,
                             Subject:"Woodworking",
                             Description:"safety, wood science, practical assembly and design tools",
                             Location: "Workshop 1",
